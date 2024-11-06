@@ -35,7 +35,7 @@ Button.addEventListener('click', function logging(){
 
     if (Login == true){
         localStorage.setItem('UserName', GetUser);
-        window.location.href = './HTML/index.html'
+        window.location.href = './index.html'
     } else {
         alert('erro')
     }
