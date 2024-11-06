@@ -36,5 +36,5 @@ if (userName !== 'Visitante') {
 
 // Redireciona para a página de login ao clicar no botão 'Entrar'
 document.getElementById('button-entrar')?.addEventListener('click', () => {
-    window.location.href = '../HTML/JoinPage.html';
+    window.location.href = './HTML/JoinPage.html';
 });
