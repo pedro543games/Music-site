@@ -137,7 +137,7 @@ music.addEventListener('ended', () => changeMusic(1));
 music.addEventListener('timeupdate', updateProgressBar);
 artist.addEventListener("click", function Artist() {
     let author = (songs[musicIndex].artist);
-    window.location.href = '../HTML/artist-Page.html?artist=' + author;
+    window.location.href = './HTML/artist-Page.html?artist=' + author;
 });
 playerProgress.addEventListener('click', setProgressBar);
 playerVolume.addEventListener('click', setVolume);
