@@ -46,7 +46,7 @@ const songs = [
         artist: 'FKJ'
     }
 ];
-let musicIndex = 1;
+let musicIndex = 0;
 let isPlaying = false;
 
 function togglePlay() {
