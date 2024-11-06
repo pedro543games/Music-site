@@ -61,6 +61,7 @@ function playMusic() {
     isPlaying = true;
     playBtn.classList.replace('bi-play-fill', 'bi-pause-fill');
     playBtn.setAttribute('title', 'Pause');
+    sessionStorage.setItem('isPlaying', 'true');
     music.play().catch(err => console.error('Error playing music:', err));
 }
 
@@ -68,6 +69,7 @@ function pauseMusic() {
     isPlaying = false;
     playBtn.classList.replace('bi-pause-fill', 'bi-play-fill');
     playBtn.setAttribute('title', 'Play');
+    sessionStorage.setItem('isPlaying', 'false');
     music.pause();
 }
 
@@ -173,9 +175,10 @@ document.getElementById('volume-control').addEventListener('mouseleave', functio
 
 loadMusic(songs[musicIndex]);
 music.currentTime = localStorage.getItem('musicTime')
-if (localStorage.getItem('musicIndex')) {
+if (sessionStorage.getItem('isPlaying') === 'true') {
     isPlaying = true;
-    playBtn.classList.replace('bi-play-fill', 'bi-pause-fill');
-    playBtn.setAttribute('title', 'Pause');
-    music.play().catch(err => console.error('Error playing music:', err));
+    playMusic();
+} else {
+    loadMusic(songs[musicIndex]);
+    music.currentTime = localStorage.getItem('musicTime') || 0;
 }
