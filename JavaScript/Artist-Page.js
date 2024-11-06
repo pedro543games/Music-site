@@ -18,11 +18,11 @@ const ArtistImage = document.getElementById('artist-image');
 const ArtistInfo = [
     {
         Name: 'Seu Jorge',
-        PerfilImage: '../Assets/Thumbs/seu-jorge/Perfil_Image.png',
+        PerfilImage: './Assets/Thumbs/seu-jorge/Perfil_Image.png',
     },
     {
         Name: '7 Minutoz',
-        PerfilImage: '../Assets/Thumbs/7-minutoz/Perfil_Image.png'
+        PerfilImage: './Assets/Thumbs/7-minutoz/Perfil_Image.png'
     }
 ];
 
@@ -35,5 +35,5 @@ if (artistData) {
 } else {
     console.warn('Artista não encontrado. Usando imagem padrão.');
     ArtistName.textContent = 'Artista Desconhecido'; // Nome padrão
-    ArtistImage.src = '../Assets/Icons/blank-user.png'; // Imagem padrão
+    ArtistImage.src = './Assets/Icons/blank-user.png'; // Imagem padrão
 }
