@@ -16,15 +16,15 @@ const music = new Audio();
 let MusicVolume = 1;
 const songs = [
     {
-        path: '../Assets/Musics/7-minutoz/JUDAS.mp3',
+        path: './Assets/Musics/7-minutoz/JUDAS.mp3',
         displayName: 'Judas',
-        cover: '../Assets/Thumbs/7-minutoz/judas.png',
+        cover: './Assets/Thumbs/7-minutoz/judas.png',
         artist: '7 Minutoz'
     },
     {
-        path: '../Assets/Musics/seu-jorge/amiga-da-minha-mulher.mp3',
+        path: './Assets/Musics/seu-jorge/amiga-da-minha-mulher.mp3',
         displayName: 'Amiga da minha mulher',
-        cover: '../Assets/Thumbs/seu-jorge/amiga-da-minha-mulher.png',
+        cover: './Assets/Thumbs/seu-jorge/amiga-da-minha-mulher.png',
         artist: 'Seu Jorge'
     },
     {
