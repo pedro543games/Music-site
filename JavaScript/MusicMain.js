@@ -1,5 +1,3 @@
-console.log('active')
-
 const image = document.getElementById('cover'),
     title = document.getElementById('music-title'),
     artist = document.getElementById('music-artist'),
