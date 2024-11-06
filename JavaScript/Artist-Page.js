@@ -35,5 +35,5 @@ if (artistData) {
 } else {
     console.warn('Artista não encontrado. Usando imagem padrão.');
     ArtistName.textContent = 'Artista Desconhecido'; // Nome padrão
-    ArtistImage.src = '../Assets/Icons/blank-user.png'; // Imagem padrão
+    ArtistImage.src = './Assets/Icons/blank-user.png'; // Imagem padrão
 }

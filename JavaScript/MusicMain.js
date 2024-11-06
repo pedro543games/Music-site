@@ -46,7 +46,7 @@ const songs = [
         artist: 'FKJ'
     }
 ];
-let musicIndex = 0;
+let musicIndex = (localStorage.getItem('musicIndex') || 1);
 let isPlaying = false;
 
 function togglePlay() {
@@ -80,12 +80,20 @@ function loadMusic(song) {
 }
 
 function changeMusic(direction) {
-    musicIndex = (musicIndex + direction + songs.length) % songs.length;
-    loadMusic(songs[musicIndex]);
-    playMusic();
+    if (direction === -1 && music.currentTime > 1) {
+        music.currentTime = 0;
+    } else {
+        musicIndex = (musicIndex + direction + songs.length) % songs.length;
+        loadMusic(songs[musicIndex]);
+        playMusic();
+    }
+
+    localStorage.setItem('musicIndex', musicIndex)
+
 }
 
 function updateProgressBar() {
+    localStorage.setItem('musicTime', music.currentTime)
     const { duration, currentTime } = music;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
@@ -164,3 +172,10 @@ document.getElementById('volume-control').addEventListener('mouseleave', functio
 })
 
 loadMusic(songs[musicIndex]);
+music.currentTime = localStorage.getItem('musicTime')
+if (localStorage.getItem('musicIndex')) {
+    isPlaying = true;
+    playBtn.classList.replace('bi-play-fill', 'bi-pause-fill');
+    playBtn.setAttribute('title', 'Pause');
+    music.play().catch(err => console.error('Error playing music:', err));
+}
