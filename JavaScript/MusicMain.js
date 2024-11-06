@@ -30,21 +30,21 @@ const songs = [
         artist: 'Seu Jorge'
     },
     {
-        path: '../Assets/Musics/FKJ/Ylang-Ylang.mp3',
+        path: './Assets/Musics/FKJ/Ylang-Ylang.mp3',
         displayName: 'Ylang Ylang',
-        cover: '../Assets/Thumbs/FKJ/ylang-ylang.png',
+        cover: './Assets/Thumbs/FKJ/ylang-ylang.png',
         artist: 'FKJ'
     },
     {
-        path: '../Assets/Musics/seu-jorge/mina-do-condomínio.mp3',
+        path: './Assets/Musics/seu-jorge/mina-do-condomínio.mp3',
         displayName: 'Mina do Condomínio',
-        cover: '../Assets/Thumbs/seu-jorge/mina-do-condomínio.png',
+        cover: './Assets/Thumbs/seu-jorge/mina-do-condomínio.png',
         artist: 'Seu Jorge'
     },
     {
-        path: '../Assets/Musics/FKJ/Tadow.mp3',
+        path: './Assets/Musics/FKJ/Tadow.mp3',
         displayName: 'Tadow',
-        cover: '../Assets/Thumbs/FKJ/Tadow.png',
+        cover: './Assets/Thumbs/FKJ/Tadow.png',
         artist: 'FKJ'
     }
 ];
