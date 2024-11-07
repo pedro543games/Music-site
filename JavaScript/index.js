@@ -18,8 +18,15 @@ setInterval(updateText, 60000);
 
 // Adiciona uma classe ao header quando ocorre rolagem na página
 const navBar = document.getElementById('header');
+const playerMusic = document.getElementById('player-music')
 document.addEventListener('scroll', () => {
+
     navBar.classList.toggle('scroll', window.scrollY > 0);
+    if (window.scrollY > 0.5 ) {
+        playerMusic.classList.replace('not-visible', 'visible')
+    } else {
+        playerMusic.classList.replace('visible', 'not-visible')
+    }
 });
 
 // Exibe o nome do usuário se estiver salvo no localStorage
@@ -33,8 +40,3 @@ if (userName !== 'Visitante') {
     document.getElementById('user-image').remove();
     document.getElementById('user-name').remove();
 }
-
-// Redireciona para a página de login ao clicar no botão 'Entrar'
-document.getElementById('button-entrar')?.addEventListener('click', () => {
-    window.location.href = './HTML/JoinPage.html';
-});

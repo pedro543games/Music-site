@@ -24,6 +24,7 @@
             <section class="logo">
                 <img class="white-logo" src="./Assets/Icons/music_white.svg" alt="logo">
                 <img class="black-logo" src="./Assets/Icons/music_black.svg" alt="logo">
+                <h2>Escutaê</h2>
             </section>
 
             <section class="menu-desktop">
@@ -37,11 +38,11 @@
             </section>
 
             <section class="btn-entrar">
-                <a id="button-entrar"href="#">
+                <a id="button-entrar" href="./HTML/JoinPage.html">
                     <button>Entrar</button>
                 </a>
                 <img id="user-image"class="user-image" id="user-image" src="./Assets/Icons/Blank-User.png"alt="user-image">
-                <p id="user-name" class="user-name">UserName</p>
+                <a id="user-name" class="user-name" href="#">UserName</a>
             </section>
 
         </div>
@@ -71,7 +72,7 @@
                 <h2 id="music-title"></h2>
                 <h3 id="music-artist"></h3>
         
-                <div class="player-progress" id="player-progress">
+                <div class="container-progress" id="player-progress">
                     <div class="progress" id="progress"></div>
                     <div class="music-duration">
                         <span id="current-time">0:00</span>
@@ -93,8 +94,25 @@
              </div>
          </div>
      </section>
-     <script src="./JavaScript/MusicMain.js"></script>
-    <script src="./JavaScript/index.js"></script>
+    
+    
+
+    <section class="web-player not-visible" id="player-music">
+        <div class="left">
+            <img src="" id="cover" alt="MusicImage">
+            <section class="info">
+                <h3 id="music-title">MusicName</h3>
+                <p id="music-artist">Artist</p>
+            </section>
+        </div>
+        <div class="player-progress" id="player-progress">
+            <div class="progress" id="progress"></div>
+            <div class="player-music-duration">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="interface">
@@ -109,10 +127,12 @@
                 <a href="#">Contato</a>
             </section>
             <section class="bottom-footer">
-                <p>&copy; Todos direitos reservados</p>
+                <p>Escutaê &copy; Todos direitos reservados</p>
             </section>
         </div>
     </footer>
 
+    <script src="./JavaScript/MusicMain.js"></script>
+    <script src="./JavaScript/index.js"></script>
 </body>
 </html>

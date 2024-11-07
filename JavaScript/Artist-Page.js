@@ -23,6 +23,10 @@ const ArtistInfo = [
     {
         Name: '7 Minutoz',
         PerfilImage: '../Assets/Thumbs/7-minutoz/Perfil_Image.png'
+    },
+    {
+        Name: 'FKJ',
+        PerfilImage: '../Assets/Thumbs/FKJ/Perfil_Image.png'
     }
 ];
 
